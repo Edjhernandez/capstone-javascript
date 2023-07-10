@@ -13,6 +13,7 @@ btb.addEventListener('click', () => {
   l1.classList.toggle('activeline1');
   l2.classList.toggle('activeline2');
   l3.classList.toggle('activeline3');
+
   if (showMenu.style.display === 'block') {
     showMenu.style.display = 'none';
   } else {

@@ -84,6 +84,7 @@ nav.navbar {
   border-radius: 1.5rem;
   width: 90%;
   margin-bottom: 1rem;
+  display: none;
 }
 
 nav.navbar ul {
@@ -105,4 +106,57 @@ nav.navbar li a {
   font-family: fasthand, sans-serif;
   font-size: 1rem;
   font-weight: 100;
+}
+
+@media screen and (min-width: 420px) and (min-height: 300px) {
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  header img {
+    max-height: 8rem;
+    margin: 0.25rem auto;
+  }
+
+  header h1 {
+    width: 100%;
+    margin-left: 1.75rem;
+  }
+
+  div.title-button {
+    width: 45%;
+  }
+
+  button.burger {
+    display: none;
+  }
+
+  nav.navbar {
+    display: flex;
+    width: 45%;
+    border: none;
+    margin: 0;
+  }
+
+  nav.navbar ul {
+    margin: 1rem 0.75rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+  }
+
+  nav.navbar li {
+    margin: 0 1rem;
+    width: 100%;
+    border: solid 1px #f0e3ca;
+    border-radius: 1.5rem;
+    cursor: pointer;
+  }
+
+  nav.navbar li a {
+    margin: auto 1rem;
+  }
 }
