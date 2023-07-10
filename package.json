@@ -5,7 +5,8 @@
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack --mode=production",
+    "start": "webpack serve --mode development --open",
     "prepare": "husky install"
   },
   "repository": {
@@ -25,6 +26,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.27.5",
+    "file-loader": "^6.2.0",
     "hint": "^7.1.10",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
@@ -35,7 +37,8 @@
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0",
     "webpack": "^5.88.1",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "lint-staged": {
     "*.(js)": [
