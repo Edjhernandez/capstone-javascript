@@ -2,6 +2,8 @@ export default function printgrid(arr) {
   const typeofmeal = arr.shift();
   const $container = document.getElementById('cardscontainer');
 
+  $container.innerHTML = '';
+
   arr.forEach((element, index) => {
     const $cardcontainer = document.createElement('div');
     const $cardimg = document.createElement('img');
@@ -32,10 +34,16 @@ export default function printgrid(arr) {
 
     if (typeofmeal === 'Beef') {
       $cardcontainer.classList.add('beef-color');
+      $btbcomment.classList.add('letter-beef-color');
+      $btblike.classList.add('letter-beef-color');
     } else if (typeofmeal === 'pasta') {
       $cardcontainer.classList.add('pasta-color');
+      $btbcomment.classList.add('letter-pasta-color');
+      $btblike.classList.add('letter-pasta-color');
     } else {
       $cardcontainer.classList.add('Seafood-color');
+      $btbcomment.classList.add('letter-seafood-color');
+      $btblike.classList.add('letter-seafood-color');
     }
 
     $container.appendChild($cardcontainer);

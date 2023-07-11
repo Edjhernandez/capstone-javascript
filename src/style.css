@@ -193,8 +193,19 @@ main #cardscontainer {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 0.75rem;
   color: var(--main-bg-text);
-  margin: 0 auto 0.5rem 0;
-  overflow-x: hidden;
+  margin: 0 auto 0.5rem 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardcontainer button {
+  width: 46%;
+  margin: 0 0.25rem 0.25rem 0.25rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.65rem;
+  font-weight: 800;
+  cursor: pointer;
 }
 
 .beef-color {
@@ -207,6 +218,18 @@ main #cardscontainer {
 
 .Seafood-color {
   background-color: var(--seafood-color);
+}
+
+.letter-beef-color {
+  color: var(--beef-color);
+}
+
+.letter-pasta-color {
+  color: var(--pasta-color);
+}
+
+.letter-seafood-color {
+  color: var(--seafood-color);
 }
 
 @media screen and (min-width: 420px) and (min-height: 300px) {
@@ -273,5 +296,22 @@ main #cardscontainer {
   footer p {
     align-self: flex-end;
     margin-right: 1rem;
+  }
+
+  .cardcontainer {
+    width: 25%;
+
+    /* margin: 0.5rem;
+    border-radius: 6px; */
+  }
+}
+
+@media screen and (min-width: 1200px) { /* ********* desktop version ********** */
+
+  .cardcontainer {
+    width: 20%;
+
+    /* margin: 0.5rem;
+    border-radius: 6px; */
   }
 }

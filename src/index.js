@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('click', (e) => {
-  if (e.target.matches('#beefmeals')) {
+  if (e.target.matches('.beefmeals')) {
     if (showMenu.style.display === 'block') {
       showMenu.style.display = 'none';
       l1.classList.toggle('activeline1');
@@ -71,7 +71,7 @@ document.addEventListener('click', (e) => {
       });
   }
 
-  if (e.target.matches('#pastameals')) {
+  if (e.target.matches('.pastameals')) {
     if (showMenu.style.display === 'block') {
       showMenu.style.display = 'none';
       l1.classList.toggle('activeline1');
@@ -87,14 +87,14 @@ document.addEventListener('click', (e) => {
       });
   }
 
-  if (e.target.matches('#seafoodmeals')) {
+  if (e.target.matches('.seafoodmeals')) {
     if (showMenu.style.display === 'block') {
       showMenu.style.display = 'none';
       l1.classList.toggle('activeline1');
       l2.classList.toggle('activeline2');
       l3.classList.toggle('activeline3');
     }
-    // console.log(allSeafoodURL);
+
     getdata(allSeafoodURL)
       .then((response) => {
         printgrid(response);
