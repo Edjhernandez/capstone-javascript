@@ -180,12 +180,17 @@ main #cardscontainer {
   width: 45%;
   margin: 0.5rem;
   border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cardcontainer img {
   width: 100%;
   margin-bottom: 0.5rem;
-  border-radius: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .cardcontainer h3 {
@@ -199,13 +204,21 @@ main #cardscontainer {
   text-overflow: ellipsis;
 }
 
+.containerbtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .cardcontainer button {
-  width: 46%;
   margin: 0 0.25rem 0.25rem 0.25rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 0.65rem;
   font-weight: 800;
   cursor: pointer;
+  width: 30%;
 }
 
 .beef-color {

@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('click', (e) => {
-  if (e.target.matches('.beefmeals')) {
+  if (e.target.matches('.beefmeals, .beefmeals a')) {
     if (showMenu.style.display === 'block') {
       showMenu.style.display = 'none';
       l1.classList.toggle('activeline1');
@@ -71,7 +71,7 @@ document.addEventListener('click', (e) => {
       });
   }
 
-  if (e.target.matches('.pastameals')) {
+  if (e.target.matches('.pastameals, .pastameals a')) {
     if (showMenu.style.display === 'block') {
       showMenu.style.display = 'none';
       l1.classList.toggle('activeline1');
@@ -87,7 +87,7 @@ document.addEventListener('click', (e) => {
       });
   }
 
-  if (e.target.matches('.seafoodmeals')) {
+  if (e.target.matches('.seafoodmeals, .seafoodmeals a')) {
     if (showMenu.style.display === 'block') {
       showMenu.style.display = 'none';
       l1.classList.toggle('activeline1');

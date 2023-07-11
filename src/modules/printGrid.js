@@ -10,6 +10,7 @@ export default function printgrid(arr) {
     const $cardtitle = document.createElement('h3');
     const $btbcomment = document.createElement('button');
     const $btblike = document.createElement('button');
+    const $containerbtn = document.createElement('div');
 
     $cardcontainer.innerHTML = '';
 
@@ -28,9 +29,12 @@ export default function printgrid(arr) {
 
     $cardcontainer.appendChild($cardimg);
     $cardcontainer.appendChild($cardtitle);
-    $cardcontainer.appendChild($btbcomment);
-    $cardcontainer.appendChild($btblike);
+    $containerbtn.appendChild($btbcomment);
+    $containerbtn.appendChild($btblike);
+    $cardcontainer.appendChild($containerbtn);
+
     $cardcontainer.classList.add('cardcontainer');
+    $containerbtn.classList.add('containerbtn');
 
     if (typeofmeal === 'Beef') {
       $cardcontainer.classList.add('beef-color');
