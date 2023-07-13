@@ -3,6 +3,14 @@
   src: url(./assets/Fasthand-Regular.ttf);
 }
 
+* {
+  --main-bg-color: #8ca38b;
+  --main-bg-text: #f7eeaa;
+  --beef-color: #70615c;
+  --pasta-color: #edb552;
+  --seafood-color: #300d28;
+}
+
 html,
 body,
 header,
@@ -14,7 +22,7 @@ footer {
 }
 
 header {
-  background-color: #a35709;
+  background-color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +37,7 @@ header img {
 }
 
 h1 {
-  color: #f0e3ca;
+  color: var(--main-bg-text);
   margin: 0;
   margin-left: 0.5rem;
   font-family: fasthand, sans-serif;
@@ -59,7 +67,7 @@ button.burger {
 
 button.burger > span {
   display: block;
-  background: #f0e3ca;
+  background: var(--main-bg-text);
   height: 4px;
   width: 93%;
   border-radius: 5px;
@@ -81,7 +89,7 @@ button.burger > span {
 }
 
 nav.navbar {
-  border: solid 1px #f0e3ca;
+  border: solid 1px var(--main-bg-text);
   border-radius: 1.5rem;
   width: 90%;
   margin-bottom: 1rem;
@@ -121,24 +129,20 @@ footer ul li a,
 p {
   font-size: 0.75rem;
   text-decoration: none;
-  color: #f0e3ca;
+  color: var(--main-bg-text);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav.navbar li a {
-  color: #f0e3ca;
+  color: var(--main-bg-text);
   text-decoration: none;
   font-family: fasthand, sans-serif;
   font-size: 1rem;
   font-weight: 100;
 }
 
-main {
-  height: 53.5vh;
-}
-
 footer {
-  background-color: #a35709;
+  background-color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,7 +157,7 @@ footer {
 }
 
 .contacts h2 {
-  color: #f0e3ca;
+  color: var(--main-bg-text);
   font-family: fasthand, sans-serif;
   font-size: 1.25rem;
   margin: 0.5rem;
@@ -162,6 +166,83 @@ footer {
 footer div.contacts {
   display: flex;
   flex-direction: column;
+}
+
+main #cardscontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.cardcontainer {
+  width: 45%;
+  margin: 0.5rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardcontainer img {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.cardcontainer h3 {
+  width: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.75rem;
+  color: var(--main-bg-text);
+  margin: 0 auto 0.5rem 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.containerbtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cardcontainer button {
+  margin: 0 0.25rem 0.25rem 0.25rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.65rem;
+  font-weight: 800;
+  cursor: pointer;
+  width: 30%;
+}
+
+.beef-color {
+  background-color: var(--beef-color);
+}
+
+.pasta-color {
+  background-color: var(--pasta-color);
+}
+
+.Seafood-color {
+  background-color: var(--seafood-color);
+}
+
+.letter-beef-color {
+  color: var(--beef-color);
+}
+
+.letter-pasta-color {
+  color: var(--pasta-color);
+}
+
+.letter-seafood-color {
+  color: var(--seafood-color);
 }
 
 @media screen and (min-width: 420px) and (min-height: 300px) {
@@ -216,7 +297,7 @@ footer div.contacts {
   nav.navbar li {
     margin: 0 1rem;
     width: 100%;
-    border: solid 1px #f0e3ca;
+    border: solid 1px var(--main-bg-text);
     border-radius: 1.5rem;
     cursor: pointer;
   }
@@ -228,5 +309,22 @@ footer div.contacts {
   footer p {
     align-self: flex-end;
     margin-right: 1rem;
+  }
+
+  .cardcontainer {
+    width: 25%;
+
+    /* margin: 0.5rem;
+    border-radius: 6px; */
+  }
+}
+
+@media screen and (min-width: 1200px) { /* ********* desktop version ********** */
+
+  .cardcontainer {
+    width: 20%;
+
+    /* margin: 0.5rem;
+    border-radius: 6px; */
   }
 }
